@@ -4,7 +4,7 @@
 
 void easter(int);
 float power(float, int);
-float _3task(int x);
+float cosinus(int x);
 
 int main()
 {
@@ -13,7 +13,7 @@ int main()
     easter(year);
     printf("%f\n", power(x, n));
     printf("%f\n", power(x, -n));
-    printf("cos: %f %f\n ", _3task(x), cos(x));
+    printf("cos: %f %f\n ", cosinus(x), cos(x));
 }
 
 
@@ -81,14 +81,14 @@ float power(float x, int n)
 
 float fact(int n)
 {
-    float factor = 1;
-    for (int i = n; i > 0; i--)
+    if(n <= 0)
     {
-        factor*= i;
+        return 1;
     }
-    return factor;
+    return n * fact(n - 1);
 }
-float _3task(int x)
+
+float cosinus(int x)
 {
     float eps = 0.0001; 
     int n = 0;
