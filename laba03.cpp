@@ -34,7 +34,16 @@ int task1()
     for (int i = 0; i < n; i++)
     {
         b[i] = -50 + rand() % (50 + 50 + 1);
+        if (b[i] > 0)
+        {
+        	m++;
+		}
+		if (b[i] < 0)
+        {
+        	k++;
+		}
     }
+    
 
     c = (int*) malloc(m * sizeof(int)); 
     d = (int*) malloc(k * sizeof(int)); 
@@ -76,6 +85,7 @@ int task1()
     }
     printf("%d ", d[k-1]);
     printf("]\n");
+    
 
 
     return 0;
